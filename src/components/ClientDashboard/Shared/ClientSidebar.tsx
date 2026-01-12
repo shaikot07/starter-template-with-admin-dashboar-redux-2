@@ -8,13 +8,11 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
 import { RxDashboard } from "react-icons/rx";
-import { FaUserPlus, FaUsers } from "react-icons/fa";
-import { TbCalendarUser } from "react-icons/tb";
-import { BiSolidUserBadge } from "react-icons/bi";
+import { FaUsers } from "react-icons/fa";
+
 import { HiOutlineUserMinus } from "react-icons/hi2";
 
 import { IconType } from "react-icons";
-import { IoSettingsOutline } from "react-icons/io5";
 
 // Types
 export interface SidebarItem {
@@ -42,26 +40,6 @@ const defaultSidebarItems: SidebarItem[] = [
     icon: HiOutlineUserMinus,
     label: "Patients",
     href: "/admin-dashboard/patients",
-  },
-  {
-    icon: FaUserPlus,
-    label: "Patient Assignment",
-    href: "/admin-dashboard/patient-assignment",
-  },
-  {
-    icon: BiSolidUserBadge,
-    label: "Protocol Management",
-    href: "/admin-dashboard/protocol-management",
-  },
-  {
-    icon: TbCalendarUser,
-    label: "Audit Log",
-    href: "/admin-dashboard/audit-log",
-  },
-  {
-    icon: IoSettingsOutline,
-    label: "Settings",
-    href: "/admin-dashboard/settings",
   },
 ];
 
@@ -205,7 +183,4 @@ const ClientSidebar: React.FC<SidebarProps> = ({
   );
 };
 
-
-
-
-export default ClientSidebar
+export default ClientSidebar;
